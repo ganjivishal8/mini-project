@@ -20,7 +20,7 @@ $(function() {
   })
 
   $('.movie-button').on('click',function(){
-    var my_api_key = 'YOUR_API_KEY';
+    var my_api_key = '2f76b0a89876ca514be52f974d308bbe';
     var title = $('.movie').val();
     if (title=="") {
       $('.results').css('display','none');
@@ -40,8 +40,8 @@ $(function() {
 // will be invoked when clicking on the recommended movie cards
 function recommendcard(e){
   $("#loader").fadeIn();
-  var my_api_key = 'YOUR_API_KEY';
-  var title = e.getAttribute('title'); 
+  var my_api_key = '2f76b0a89876ca514be52f974d308bbe';
+  var title = e.getAttribute('title');
   load_details(my_api_key,title);
 }
 
@@ -192,13 +192,13 @@ function show_details(movie_details,movie_title,my_api_key,movie_id,movie_title_
 
   // calling `get_movie_cast` to get the top cast for the queried movie
   movie_cast = get_movie_cast(movie_id,my_api_key);
-  
+
   // calling `get_individual_cast` to get the individual cast details
   ind_cast = get_individual_cast(movie_cast,my_api_key);
 
   // calling `get_recommendations` to get the recommended movies for the given movie id from the TMDB API
   recommendations = get_recommendations(movie_id, my_api_key);
-  
+
   details = {
       'title':movie_title,
       'cast_ids':JSON.stringify(movie_cast.cast_ids),
@@ -214,7 +214,7 @@ function show_details(movie_details,movie_title,my_api_key,movie_id,movie_title_
       'overview':overview,
       'rating':rating,
       'vote_count':vote_count.toLocaleString(),
-      'rel_date':release_date,  
+      'rel_date':release_date,
       'release_date':new Date(release_date).toDateString().split(' ').slice(1).join(' '),
       'runtime':runtime,
       'status':status,
@@ -323,7 +323,7 @@ function get_movie_cast(movie_id,my_api_key){
     rec_movies_org = [];
     rec_year = [];
     rec_vote = [];
-    
+
     $.ajax({
       type: 'GET',
       url: "https://api.themoviedb.org/3/movie/"+movie_id+"/recommendations?api_key="+my_api_key,
