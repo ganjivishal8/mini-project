@@ -49,9 +49,9 @@
         <h6 id="status" style="color:white;">STATUS: &nbsp;{{status}}</h6>
       </div>
     </div>
-  </div>  
+  </div>
   <br/>
-	
+
 {% for name, details in cast_details.items() if not cast_details.hidden %}
   <div class="modal fade" id="{{details[0]}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -63,12 +63,12 @@
           </button>
         </div>
 
-        <div class="modal-body">
+      <div class="modal-body">
           <img class="profile-pic" src="{{details[1]}}" alt="{{name}} - profile" style="width: 250px;height:400px;border-radius: 10px;" />
           <div style="margin-left: 20px">
             <p><strong>Birthday:</strong> {{details[2]}} </p>
             <p><strong>Place of Birth:</strong> {{details[3]}} </p>
-            <p> 
+            <p>
               <p><strong>Biography:</strong><p>
               {{details[4]}}
             </p>
@@ -77,12 +77,12 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
   {% endfor %}
 
-  <div class="container"> 
+  <div class="container">
 
     {% if casts|length > 1 %}
       <div class="movie" style="color: #E8E8E8;">
@@ -92,7 +92,7 @@
         </center>
       </div>
 
-    
+
       <div class="movie-content">
         {% for name, details in casts.items() if not casts.hidden %}
           <div class="castcard card" style="width: 14rem;" title="Click to know more about {{name}}" data-toggle="modal" data-target="#{{details[0]}}">
@@ -101,7 +101,7 @@
               <figcaption class="fig">
                 <button class="card-btn btn btn-danger"> Know More </button>
               </figcaption>
-            </div>
+            </div>-->
             <div class="card-body" style="font-family: 'Rowdies', cursive;font-size: 18px;">
               <h5 class="card-title">{{name|upper}}</h5>
               <h5 class="card-title" style="font-size: 18px"><span style="color:#756969;font-size: 18px;">AS {{details[1]|upper}}</span></h5>
@@ -123,18 +123,18 @@
                   <th class="text-center" scope="col">Sentiments</th>
                 </tr>
             </thead>
-    
+
           <tbody>
 	    {% for review, status in reviews.items() if not reviews.hidden %}
-    	        <tr style="background-color:#e5091485;">
+    	        <tr style="background-color:#696969;">
                 <td>{{review}}</td>
                 <td>
                   <center>
-                    {{status}} : 
+                    {{status}} :
                     {% if status =='Positive' %}
-                      &#128515;
+                      &#128525;
                     {% else %}
-                      &#128534;
+                      &#128532;
                     {% endif %}
                   </center>
                 </td>
@@ -161,8 +161,8 @@
     {% endif %}
   </center>
   <br/>
-   
- 
+
+
     {% if movie_cards|length > 1 %}
 
       <div class="movie" style="color: #E8E8E8;">
