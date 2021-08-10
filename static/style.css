@@ -1,168 +1,24 @@
-.carouselOfImages
-{
-  max-width:960px;
-  margin:auto;
-  overflow:visible;
-}
-.carouselImage {
-  width: 200px;
-  height: 200px;
-  margin-top:65px;
-  margin-bottom:100px;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
-  transition: transform 0.5s;
-  transform: scale(1);
-}
-.carouselImage img {
-  height:235px;
-}
-.carouselImage.is-selected {
-  z-index:10;
-  transform: scale(1.5);
-}
-.carouselImage.nextToSelected {
-  transform: scale(1.5);
-  z-index:10;
-  transform: scale(1.25);
-  z-index:5;
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
 }
 
-/*! Flickity v2.0.5
-https://flickity.metafizzy.co
----------------------------------------------- */
-
-.flickity-enabled {
-  position: relative;
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e50914; 
+  border-radius: 10px;
 }
 
-.flickity-enabled:focus { outline: none; }
-
-.flickity-viewport {
-  overflow: hidden;
-  position: relative;
-  height: 100%;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
 }
 
-.flickity-slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-/* draggable */
-
-.flickity-enabled.is-draggable {
-  -webkit-tap-highlight-color: transparent;
-          tap-highlight-color: transparent;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.flickity-enabled.is-draggable .flickity-viewport {
-  cursor: move;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.flickity-prev-next-button {
-  position: absolute;
-  top: 50%;
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 50%;
-  background: white;
-  background: hsla(0, 0%, 100%, 0.75);
-  cursor: pointer;
-  /* vertically center */
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.flickity-prev-next-button:hover { background: white; }
-
-.flickity-prev-next-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px #09F;
-}
-
-.flickity-prev-next-button:active {
-  opacity: 0.6;
-}
-
-.flickity-prev-next-button.previous { left: 10px; }
-.flickity-prev-next-button.next { right: 10px; }
-/* right to left */
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: 10px;
-}
-.flickity-rtl .flickity-prev-next-button.next {
-  right: auto;
-  left: 10px;
-}
-
-.flickity-prev-next-button:disabled {
-  opacity: 0.3;
-  cursor: auto;
-}
-
-.flickity-prev-next-button svg {
-  position: absolute;
-  left: 20%;
-  top: 20%;
-  width: 60%;
-  height: 60%;
-}
-
-.flickity-prev-next-button .arrow {
-  fill: #333;
-}
-/* ---- page dots ---- */
-
-.flickity-page-dots {
-  position: absolute;
-  width: 100%;
-  bottom: -25px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-  line-height: 1;
-}
-
-.flickity-rtl .flickity-page-dots { direction: rtl; }
-
-.flickity-page-dots .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 8px;
-  background: #333;
-  border-radius: 50%;
-  opacity: 0.25;
-  cursor: pointer;
-}
-
-.flickity-page-dots .dot.is-selected {
-  opacity: 1;
-}
-.product-detail-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    font-size:21px;
-    font-weight:700;
-}
 .movie {
 	color: #fff;
 	margin-left: auto;
@@ -173,7 +29,7 @@ https://flickity.metafizzy.co
 .movie-content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content:space-around;
+	justify-content:center;
 }
 
 .movie-content > div {
@@ -198,13 +54,22 @@ https://flickity.metafizzy.co
 	margin-left: 50px;
 }
 
+.body-content {
+	position: relative;
+  	min-height: 100%;
+}
+
 .footer {
 	color: #e4e0e0;
-	text-align:right;
+	background-color: #e50914d1;
+	text-align:center;
 	position: fixed;
- 	bottom: 20px;
- 	right: 20px;
+	bottom: 0;
  	width: 100%;
+}
+
+.social-icons {
+	margin-left: 15px;
 }
 
 h1 {
@@ -217,6 +82,25 @@ h1 {
 
 .github-corner:hover .octo-arm {
   	animation: octocat-wave 560ms ease-in-out;
+}
+
+.fa-arrow-up {
+	font-size: 1.5em;
+	color: #ffffff;
+    background: #e50914;
+    padding: 10px;
+	border-radius: 50%;
+	float: right;
+    bottom: 25px;
+    position: relative;
+}
+
+.fa-arrow-up:hover {
+	cursor: pointer;
+}
+
+.app-title:hover {
+	cursor: pointer;
 }
 
 @keyframes octocat-wave {
@@ -246,7 +130,7 @@ h1 {
 }
 
 h6 {
-    margin-bottom: 20px;
+    margin-bottom: 20px;  
 }
 
 @media only screen and (max-width: 650px) {
@@ -284,10 +168,21 @@ h6 {
 	#autoComplete {
 	  background-position: 97% ;
 	}
-
+	
 	svg[data-toggle=tooltip] {
 		width: 50px;
 		height: 50px;
+	}
+
+	.fa-arrow-up{
+		font-size: 1em;
+		color: #ffffff;
+		background: #e50914;
+		padding: 10px;
+		border-radius: 50%;
+		float: right;
+		bottom: 10px;
+		position: relative;
 	}
 }
 
@@ -405,7 +300,7 @@ h6 {
 
 .table td {
     border-color: white;
-    border-style:solid;
+    border-style:solid; 
     border-width:1px;
 }
 
