@@ -23,7 +23,7 @@
 
   <!-- External CSS -->
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+ <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script type="text/javascript">
     var films = {{suggestions|tojson}};
     $(document).ready(function(){
@@ -84,40 +84,40 @@
   <section class="items">
             <div class="carouselOfImages">
               <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="bright" src="images/l-1.jpg"/>
+                <img data-tab="bright" src="static/l-1.jpg"/>
               </div>
               <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="avatar" src="images/l-2.jpg"/>
+                <img data-tab="avatar" src="static/l-2.jpg"/>
               </div>
              <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="nuh" src="images/l-3.jpg"/>
+                <img data-tab="nuh" src="static/l-3.jpg"/>
               </div>
                <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="lord" src="images/l-4.jpg"/>
+                <img data-tab="lord" src="static/l-4.jpg"/>
               </div>
               <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="thor" src="images/l-5.jpg"/>
+                <img data-tab="thor" src="static/l-5.jpg"/>
               </div>
                <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="john" src="images/l-6.jpg"/>
+                <img data-tab="john" src="static/l-6.jpg"/>
               </div>
               <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="bond" src="images/l-7.jpg"/>
+                <img data-tab="bond" src="static/l-7.jpg"/>
               </div>
                <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="deadpool2" src="images/l-7.jpg"/>
+                <img data-tab="deadpool2" src="static/m-1.jpg"/>
               </div>
                <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="inception" src="images/l-8.jpg"/>
+                <img data-tab="inception" src="static/m-2.jpg"/>
               </div>
                <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="fight" src="images/m-1.jpg"/>
+                <img data-tab="fight" src="static/m-3.jpg"/>
               </div>
                <div class="carouselImage" style="background-size:cover;">
-                <img data-tab="dunkirk" src="images/m-1.jpg"/>
+                <img data-tab="dunkirk" src="static/m-4.jpg"/>
               </div>
             </div>
-          </section>
+  </section>
 	<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
   <script type="text/javascript" src="{{url_for('static', filename='autocomplete.js')}}"></script>
 
