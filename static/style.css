@@ -178,13 +178,13 @@ https://flickity.metafizzy.co
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e50914;
+  background: yellow;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  background: yellow;
 }
 
 .movie {
@@ -209,13 +209,13 @@ https://flickity.metafizzy.co
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	color: #e4e0e0;
+	color: black;
 }
 
 #content {
 	background-image: url("../static/image.jpg");
-	background-color: #181818;
-	font-family: 'Noto Sans JP', sans-serif;
+	background-color: black;
+	font-family: 'Dancing Script', cursive;
 }
 
 #details {
@@ -229,8 +229,8 @@ https://flickity.metafizzy.co
 
 
 h1 {
-    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #e50914;
+    font-family: 'Dancing Script', cursive;
+    color: white;
     font-weight: bold;
     margin-top: 30px;
     text-shadow: #000000 0px 0px 13px;
@@ -239,7 +239,7 @@ h1 {
 .fa-arrow-up {
 	font-size: 1.5em;
 	color: #ffffff;
-    background: #e50914;
+    background:yellow;
     padding: 10px;
 	border-radius: 50%;
 	float: right;
@@ -303,7 +303,7 @@ h6 {
 		top:0;
 		width: 100%;
 		height: 100%;
-		background-image: url("../static/loader.gif");
+		background-image: url("../static/1480.gif");
 		background-size: 40%;
 		background-position: 50% 50%;
 		background-color: rgba(255, 255, 255, 1);
@@ -373,7 +373,7 @@ h6 {
 		top:0;
 		width: 100%;
 		height: 100%;
-		background-image: url("../static/loader.gif");
+		background-image: url("../static/1480.gif");
 		background-size: 20%;
 		background-position: 50% 50%;
 		background-color: rgba(255, 255, 255, 1);
@@ -384,7 +384,7 @@ h6 {
 
 	#loader-text {
 		vertical-align: middle;
-		color:white;
+		color:black;
 	}
 
 }
