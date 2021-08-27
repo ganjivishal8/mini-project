@@ -25,7 +25,7 @@
 
 	<div class="results">
 	    <center>
-	      <h2 id="name" class="text-uppercase" style="font-family: 'Rowdies', cursive;">{{title}}</h2>
+	      <h2 id="name" class="text-uppercase" style="font-family: 'Dancing Script', cursive;">{{title}}</h2>
 	    </center>
 	</div>
 	<br/>
@@ -40,13 +40,13 @@
       </div>
       <div id="details">
         <br/>
-        <h6 id="title" style="color:white;">TITLE: &nbsp;{{title}}</h6>
-        <h6 id="overview" style="color:white;max-width: 85%">OVERVIEW: <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{overview}}</h6>
-        <h6 id="vote_average" style="color:white;">RATING: &nbsp;{{vote_average}}/10 ({{vote_count}} votes)</h6>
-        <h6 id="genres" style="color:white;">GENRE: &nbsp;{{genres}}</h6>
-        <h6 id="date" style="color:white;">RELEASE DATE: &nbsp;{{release_date}}</h6>
-        <h6 id="runtime" style="color:white;">RUNTIME: &nbsp;{{runtime}}</h6>
-        <h6 id="status" style="color:white;">STATUS: &nbsp;{{status}}</h6>
+        <h6 id="title" style="color:black;">TITLE: &nbsp;{{title}}</h6>
+        <h6 id="overview" style="color:black;max-width: 85%">OVERVIEW: <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{overview}}</h6>
+        <h6 id="vote_average" style="color:black;">RATING: &nbsp;{{vote_average}}/10 ({{vote_count}} votes)</h6>
+        <h6 id="genres" style="color:black;">GENRE: &nbsp;{{genres}}</h6>
+        <h6 id="date" style="color:black;">RELEASE DATE: &nbsp;{{release_date}}</h6>
+        <h6 id="runtime" style="color:black;">RUNTIME: &nbsp;{{runtime}}</h6>
+        <h6 id="status" style="color:black;">STATUS: &nbsp;{{status}}</h6>
       </div>
     </div>
   </div>
@@ -56,10 +56,10 @@
   <div class="modal fade" id="{{details[0]}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header" style="background-color: #FFD700;color: white;">
+        <div class="modal-header" style="background-color: #FFD700;color: black;">
           <h5 class="modal-title" id="exampleModalLabel3">{{name}}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" style="color: white">&times;</span>
+            <span aria-hidden="true" style="color: black">&times;</span>
           </button>
         </div>
 
@@ -85,9 +85,9 @@
   <div class="container">
 
     {% if casts|length > 1 %}
-      <div class="movie" style="color: #E8E8E8;">
+      <div class="movie" style="color: black;">
         <center>
-          <h2 style="font-family: 'Rowdies', cursive;">TOP CAST</h2>
+          <h2 style="font-family: 'Dancing Script', cursive;">TOP CAST</h2>
           <h5>(Click on the cast to know more)</h5>
         </center>
       </div>
@@ -114,9 +114,9 @@
 
   <center>
     {% if reviews %}
-    <h2 style="font-family: 'Rowdies', cursive;color:white">USER REVIEWS</h2>
+    <h2 style="font-family: 'Dancing Script', cursive;color:black">USER REVIEWS</h2>
      <div class="col-md-12" style="margin: 0 auto; margin-top:25px;">
-        <table class="table table-bordered" bordercolor="white" style="color:white">
+        <table class="table table-bordered" bordercolor="black" style="color:black">
             <thead>
                 <tr>
                   <th class="text-center" scope="col" style="width: 75%">Comments</th>
@@ -126,7 +126,7 @@
 
           <tbody>
 	    {% for review, status in reviews.items() if not reviews.hidden %}
-    	        <tr style="background-color:#696969;">
+    	        <tr style="background-color:#ffec80;">
                 <td>{{review}}</td>
                 <td>
                   <center>
@@ -146,17 +146,17 @@
 
     {% if (curr_date) and (movie_rel_date) %}
       {% elif curr_date < movie_rel_date %}
-      <div style="color:white;">
-        <h1 style="color:white"> This movie is not released yet. Stay tuned! </h1>
+      <div style="color:black;">
+        <h1 style="color:black"> This movie is not released yet. Stay tuned! </h1>
       </div>
       {% else %}
-      <div style="color:white;">
-        <h1 style="color:white"> Sorry, the reviews for this movie are not available! :( </h1>
+      <div style="color:black;">
+        <h1 style="color:black"> Sorry, the reviews for this movie are not available! :( </h1>
       </div>
       {% endif %}
     {% else %}
-      <div style="color:white;">
-        <h1 style="color:white"> Sorry, the reviews for this movie are not available! :( </h1>
+      <div style="color:black;">
+        <h1 style="color:black"> Sorry, the reviews for this movie are not available! :( </h1>
       </div>
     {% endif %}
   </center>
@@ -165,8 +165,8 @@
 
     {% if movie_cards|length > 1 %}
 
-      <div class="movie" style="color: #E8E8E8;">
-        <center><h2 style="font-family: 'Rowdies', cursive;">RECOMMENDED MOVIES FOR YOU</h2><h5>(Click any of the movies to get recommendation)</h5></center>
+      <div class="movie" style="color: black;">
+        <center><h2 style="font-family: 'Dancing Script', cursive;">RECOMMENDED MOVIES FOR YOU</h2><h5>(Click any of the movies to get recommendation)</h5></center>
       </div>
 
       <div class="movie-content">
@@ -175,10 +175,10 @@
             <div class="imghvr">
               <img class="card-img-top" height="360" width="240" alt="{{details[0]}} - poster" src={{poster}}>
               <div class="card-img-overlay" >
-                <span class="card-text" style="font-size:15px;background: #000000b8;color:white;padding:2px 5px;border-radius: 10px;"><span class="fa fa-star checked">&nbsp; {{details[2]}}/10</span></span>
+                <span class="card-text" style="font-size:15px;right:15px;background: #000000b8;color:black;padding:2px 5px;border-radius: 10px;"><span class="fa fa-star checked" style="color:#FFD700">&nbsp; {{details[2]}}/10</span></span>
               </div>
               <div class=".card-img-overlay" style="position: relative;">
-                <span class="card-text" style="font-size:15px;position:absolute;bottom:20px;left:15px;background: #000000b8;color:white;padding: 5px;border-radius: 10px;">{{details[3]}}</span>
+                <span class="card-text" style="font-size:15px;position:absolute;bottom:20px;right:15px;background: #000000b8;color:black;padding: 5px;border-radius: 10px;">{{details[3]}}</span>
               </div>
               <figcaption class="fig">
                 <button class="card-btn btn btn-warning"> Click Me </button>

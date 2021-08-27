@@ -251,7 +251,7 @@ function show_details(movie_details,movie_title,my_api_key,movie_id,movie_title_
   movie_cast = get_movie_cast(movie_id,my_api_key);
 
   // calling `get_individual_cast` to get the individual cast details
-  ////******ind_cast = get_individual_cast(movie_cast,my_api_key);
+  ind_cast = get_individual_cast(movie_cast,my_api_key);
 
   // calling `get_recommendations` to get the recommended movies for the given movie id from the TMDB API
   recommendations = get_recommendations(movie_id, my_api_key);
