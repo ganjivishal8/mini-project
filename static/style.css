@@ -236,6 +236,10 @@ h1 {
     text-shadow: #000000 0px 0px 0px;
  }
 
+ h3{
+   color: black;
+ }
+
 .fa-arrow-up {
 	font-size: 1.5em;
 	color: #ffffff;
