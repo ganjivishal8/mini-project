@@ -233,7 +233,7 @@ h1 {
     color: black;
     font-weight: bold;
     margin-top: 30px;
-    text-shadow: #000000 0px 0px 13px;
+    text-shadow: #000000 0px 0px 0px;
  }
 
 .fa-arrow-up {
